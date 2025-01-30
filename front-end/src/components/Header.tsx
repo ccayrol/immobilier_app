@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Building2, Menu, X } from 'lucide-react';
-import Image from '../assets/verrou.avif'
+import Image from '../assets/verrou-removebg-preview.png'
 
 function Header() {
   const location = useLocation();
@@ -61,7 +61,9 @@ function Header() {
             </Link>
             <Link
               to="/sendMail"
-              className="bg-white text-black px-4 py-2 rounded-md text-sm font-medium hover:bg-gray-200 transition-colors duration-300"
+              className={`${
+                isActive('/about') ? 'text-white border-b-2 border-white' : 'text-gray-400 hover:text-white'
+              } px-3 py-2 text-sm font-medium transition-colors duration-300`}
             >
               Contactez-nous
             </Link>
@@ -74,7 +76,7 @@ function Header() {
                 <img 
                   src={Image} 
                   alt="Connexion" 
-                  className="h-6 w-6 mr-2" // Ajuste la taille de l'image et l'espacement
+                  className="h-8 w-8 mr-2" // Ajuste la taille de l'image et l'espacement
                 />
             </Link>
             {/* Connexion avec un style différent */}
@@ -109,11 +111,18 @@ function Header() {
               </Link>
               <Link
                 to="/sendMail"
-                className="block px-3 py-2 text-white bg-gray-800 rounded-md"
+                className="block px-3 py-2 text-white hover:bg-gray-800 rounded-md"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Contactez-nous
               </Link>
+              <Link
+                to="/login"
+                className="block px-3 py-2 text-white hover:bg-gray-800 rounded-md"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Connexion   
+            </Link>
             </div>
           </div>
         )}

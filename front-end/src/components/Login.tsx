@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { motion } from "framer-motion";
 
 const LoginForm = () => {
   const [username, setUsername] = useState('');
@@ -16,7 +17,13 @@ const LoginForm = () => {
       <div className="w-full max-w-md p-6 bg-white rounded-lg shadow-md">
         <h2 className="text-2xl font-semibold text-center text-gray-700 mb-6">Connexion</h2>
         <form onSubmit={handleSubmit}>
+        
           <div className="mb-4">
+            <motion.div
+                        initial={{ opacity: 0, y: -20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.2, duration: 0.5 }}
+            >
             <label htmlFor="username" className="block text-gray-600">Nom d'utilisateur</label>
             <input
               type="text"
@@ -26,8 +33,14 @@ const LoginForm = () => {
               onChange={(e) => setUsername(e.target.value)}
               required
             />
+            </motion.div>
           </div>
           <div className="mb-6">
+          <motion.div
+                        initial={{ opacity: 0, y: -20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.4, duration: 0.5 }}
+            >
             <label htmlFor="password" className="block text-gray-600">Mot de passe</label>
             <input
               type="password"
@@ -37,13 +50,20 @@ const LoginForm = () => {
               onChange={(e) => setPassword(e.target.value)}
               required
             />
+            </motion.div>
           </div>
+          <motion.div
+                        initial={{ opacity: 0, y: -20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.6, duration: 0.5 }}
+            >
           <button
             type="submit"
-            className="w-full py-3 bg-black text-white font-semibold rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full py-3 bg-black text-white font-semibold rounded-lg transition-transform duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500"
           >
             Se connecter
           </button>
+          </motion.div>
         </form>
       </div>
     </div>
