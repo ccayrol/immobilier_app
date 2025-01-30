@@ -33,6 +33,10 @@ function Sales() {
     fetchBiens();
   }, []);
 
+
+  const affichage_nombre = (nb:number) => {
+    return nb.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+};
   // Affichage d'un indicateur de chargement
   if (!isLoaded) {
     return (
@@ -90,7 +94,7 @@ function Sales() {
                     <span className="block">{bien.nombrePieces} pièces</span>
                   </div>
                   <div className="text-xl font-bold text-black">
-                    {bien.prix} €
+                    {affichage_nombre(Number(bien.prix))} €
                   </div>
                 </div>
 

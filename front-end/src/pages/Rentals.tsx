@@ -15,6 +15,12 @@ function Rentals() {
   const [biens, setBiens] = useState<Bien[]>([]);
   const [isLoaded, setIsLoaded] = useState(false);
 
+
+
+  const affichage_nombre = (nb:number) => {
+    return nb.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+};
+
   // Fonction pour charger les biens avec gestion du cache
   useEffect(() => {
     const fetchBiens = async () => {
@@ -90,7 +96,7 @@ function Rentals() {
                     <span className="block">{bien.nombrePieces} pièces</span>
                   </div>
                   <div className="text-xl font-bold text-black">
-                    {bien.prix} €/mois
+                    {affichage_nombre(Number(bien.prix))} €/mois
                   </div>
                 </div>
 
