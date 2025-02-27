@@ -62,7 +62,7 @@ function Header() {
             <Link
               to="/sendMail"
               className={`${
-                isActive('/about') ? 'text-white border-b-2 border-white' : 'text-gray-400 hover:text-white'
+                isActive('/sendMail') ? 'text-white border-b-2 border-white' : 'text-gray-400 hover:text-white'
               } px-3 py-2 text-sm font-medium transition-colors duration-300`}
             >
               Contactez-nous
