@@ -66,7 +66,7 @@ function Home() {
                   </a>
                 </div>
                 <div className="pt-4">
-                  <Link to="/about">
+                  <Link to="/sendmail">
                     <button className="w-full bg-black text-white px-6 py-3 rounded-md text-base md:text-lg font-medium transition-transform duration-300 hover:scale-105">
                       Prendre rendez-vous
                     </button>

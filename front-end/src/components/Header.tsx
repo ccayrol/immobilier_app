@@ -36,22 +36,6 @@ function Header() {
           {/* Navigation desktop */}
           <div className="hidden md:flex items-center space-x-8 ml-auto">
             <Link
-              to="/vente"
-              className={`${
-                isActive('/vente') ? 'text-white border-b-2 border-white' : 'text-gray-400 hover:text-white'
-              } px-3 py-2 text-sm font-medium transition-colors duration-300`}
-            >
-              Vente Immobilière
-            </Link>
-            <Link
-              to="/location"
-              className={`${
-                isActive('/location') ? 'text-white border-b-2 border-white' : 'text-gray-400 hover:text-white'
-              } px-3 py-2 text-sm font-medium transition-colors duration-300`}
-            >
-              Location
-            </Link>
-            <Link
               to="/about"
               className={`${
                 isActive('/about') ? 'text-white border-b-2 border-white' : 'text-gray-400 hover:text-white'
@@ -66,21 +50,7 @@ function Header() {
               } px-3 py-2 text-sm font-medium transition-colors duration-300`}
             >
               Contactez-nous
-            </Link>
-            <Link
-              to="/login"
-              className={`${
-              isActive('/login') ? 'text-white border-b-2 border-white' : 'text-gray-400 hover:text-white'
-              } px-3 py-2 text-sm font-medium transition-colors duration-300 flex items-center`}
-            >
-                <img 
-                  src={Image} 
-                  alt="Connexion" 
-                  className="h-8 w-8 mr-2" // Ajuste la taille de l'image et l'espacement
-                />
-            </Link>
-            {/* Connexion avec un style différent */}
-            
+            </Link>     
           </div>
         </div>
 
@@ -88,20 +58,6 @@ function Header() {
         {isMenuOpen && (
           <div className="md:hidden transition-all duration-300 ease-in-out bg-neutral-900 opacity-95">
             <div className="px-2 pt-2 pb-3 space-y-1">
-              <Link
-                to="/vente"
-                className="block px-3 py-2 text-white hover:bg-gray-800 rounded-md"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Vente Immobilière
-              </Link>
-              <Link
-                to="/location"
-                className="block px-3 py-2 text-white hover:bg-gray-800 rounded-md"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Location
-              </Link>
               <Link
                 to="/about"
                 className="block px-3 py-2 text-white hover:bg-gray-800 rounded-md"
@@ -116,13 +72,6 @@ function Header() {
               >
                 Contactez-nous
               </Link>
-              <Link
-                to="/login"
-                className="block px-3 py-2 text-white hover:bg-gray-800 rounded-md"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Connexion   
-            </Link>
             </div>
           </div>
         )}
