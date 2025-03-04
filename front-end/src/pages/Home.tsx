@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 function Home() {
   return (
     <div>
-      <section className="relative min-h-[90vh]">
+      <section className="relative min-h-[90vh] flex items-center">
         <motion.div
           className="absolute inset-0 bg-cover bg-center"
           style={{
