@@ -32,9 +32,3 @@ Il permet à l'utilisateur final (clients, prospects, partenaires) de consulter 
 - Architecture moderne avec composants réutilisables
 - Connexion dynamique à la base de données Firebase
 
-
-# Installer les dépendances
-npm install
-
-# Lancer le serveur de développement
-npm start
