@@ -32,14 +32,6 @@ Il permet à l'utilisateur final (clients, prospects, partenaires) de consulter 
 - Architecture moderne avec composants réutilisables
 - Connexion dynamique à la base de données Firebase
 
----
-
-## 🚀 Lancer le projet en local
-
-```bash
-# Cloner le dépôt
-git clone https://github.com/ton-utilisateur/immobilier-app.git
-cd immobilier-app
 
 # Installer les dépendances
 npm install
