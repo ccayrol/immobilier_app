@@ -53,7 +53,7 @@ function Home() {
               <div className="space-y-4">
                 <div className="flex items-start text-gray-700">
                   <MapPin className="h-5 w-5 mr-3 text-black flex-shrink-0 mt-1" />
-                  <p className="text-sm md:text-base">15 Cours de l'Intendance, 33000 Bordeaux</p>
+                  <p className="text-sm md:text-base">54 rue de Seguey, 33000 Bordeaux</p>
                 </div>
                 <div className="flex items-center text-gray-700">
                   <Phone className="h-5 w-5 mr-3 text-black flex-shrink-0" />
