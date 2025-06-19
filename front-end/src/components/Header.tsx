@@ -18,7 +18,7 @@ function Header() {
             <Link to="/" className="flex items-center whitespace-nowrap">
               <Building2 className="h-8 w-8 text-white" />
               <span className="ml-2 text-xl font-semibold text-white tracking-wide">
-                Soubeste Investissement
+                Partenaire Investissement
               </span>
             </Link>
           </div>
@@ -50,6 +50,14 @@ function Header() {
               } px-3 py-2 text-sm font-medium transition-colors duration-300`}
             >
               Location
+            </Link>
+            <Link
+              to="/projetphare"
+              className={`${
+                isActive('/projetphare') ? 'text-white border-b-2 border-white' : 'text-gray-400 hover:text-white'
+              } px-3 py-2 text-sm font-medium transition-colors duration-300`}
+            >
+              Projets phares
             </Link>
             <Link
               to="/about"

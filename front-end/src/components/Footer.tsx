@@ -8,7 +8,7 @@ function Footer() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* À propos - Aligné à gauche */}
           <div className="flex flex-col items-center lg:items-start">
-            <h3 className="text-lg font-semibold  mb-4 text-white">Soubeste Investissement</h3>
+            <h3 className="text-lg font-semibold  mb-4 text-white">Partenaire Investissement</h3>
             <p className="text-gray-400 text-sm sm:text-base text-center lg:text-left max-w-xs">
               Votre partenaire de confiance pour tous vos projets immobiliers à Bordeaux.
             </p>
