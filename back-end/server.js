@@ -55,7 +55,7 @@ app.post("/upload", upload.single("image"), async (req, res) => {
 
 app.post("/biens", async (req, res) => {
     try {
-        const { titre, description, type, superficie, nombrePieces, prix, imageUrl } = req.body;
+        const { titre, description, type, superficie, nombrePieces, prix, imageUrl = [] } = req.body;
 
         if (!titre || !type || !prix) {
             return res.status(400).json({ error: "Champs obligatoires manquants" });
@@ -106,21 +106,50 @@ app.delete("/biens/:id", async (req, res) => {
 // Route pour récupérer tous les biens
 app.get("/biens", async (req, res) => {
     try {
+        console.log("Requête GET /biens reçue avec type:", req.query.type);
+        
         const { type } = req.query; // Récupérer le paramètre "type"
         const snapshot = await db.collection("biens").get();
         let biens = [];
 
         snapshot.forEach((doc) => {
-            const data = doc.data();
-            // Vérifier si le bien a le type demandé (ex: "vente")
-            if (!type || data.type === type) {
-                biens.push({ id: doc.id, ...data });
+            try {
+                const data = doc.data();
+                console.log("Données brutes du document:", doc.id, data);
+                
+                // Vérifier si le bien a le type demandé (ex: "vente" ou "location")
+                if (!type || data.type === type) {
+                    // Normaliser les données pour être cohérent avec l'interface frontend
+                    const bienNormalise = {
+                        id: doc.id,
+                        titre: data.titre || "",
+                        description: data.description || "",
+                        type: data.type || "",
+                        // Convertir en string pour correspondre à l'interface frontend
+                        superficie: data.superficie ? data.superficie.toString() : "0",
+                        nombrePieces: data.nombrePieces ? data.nombrePieces.toString() : "0",
+                        prix: data.prix ? data.prix.toString() : "0",
+                        imageUrl: data.imageUrl || "",
+                        dateAjout: data.dateAjout
+                    };
+                    
+                    biens.push(bienNormalise);
+                }
+            } catch (docError) {
+                console.error("Erreur lors du traitement du document:", doc.id, docError);
+                // Continue avec les autres documents même si un échoue
             }
         });
 
+        console.log(`Nombre de biens trouvés: ${biens.length}`);
         res.json(biens);
+        
     } catch (error) {
-        res.status(500).json({ error: error.message });
+        console.error("Erreur dans GET /biens:", error);
+        res.status(500).json({ 
+            error: "Erreur lors de la récupération des biens", 
+            details: error.message 
+        });
     }
 });
 
