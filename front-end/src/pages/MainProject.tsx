@@ -3,12 +3,12 @@ import { motion } from "framer-motion";
 import { MapPin, Users, Home, Euro, TrendingUp, Building } from 'lucide-react';
 
 // Import des images (à remplacer par vos vraies images)
-import chateauExterior from '../assets/coliving1.png';
-import chateauInterior from '../assets/coliving1.png';
-import domainView from '../assets/coliving1.png';
-import renovationPlan from '../assets/coliving1.png';
+import chateauExterior from '../assets/terrefort2.jpg';
+import chateauInterior from '../assets/terrefort2.jpg';
+import domainView from '../assets/terrefort1.jpg';
+import renovationPlan from '../assets/terrefort1.jpg';
 
-function MainProject() {
+function TerrefortProject() {
   const [activeTab, setActiveTab] = useState('overview');
 
   const projectImages = [
@@ -156,11 +156,13 @@ function MainProject() {
                     </ul>
                   </div>
                   <div className="space-y-4">
-                    <img 
-                      src={domainView} 
-                      alt="Vue du domaine"
-                      className="w-full h-48 object-cover rounded-lg"
-                    />
+                    <div className="aspect-w-16 aspect-h-9">
+                      <img 
+                        src={domainView} 
+                        alt="Vue du domaine"
+                        className="w-full h-64 object-cover rounded-lg"
+                      />
+                    </div>
                     <div className="bg-gray-50 p-4 rounded-lg">
                       <h3 className="font-semibold text-black mb-2">Localisation stratégique</h3>
                       <p className="text-sm text-gray-600">
@@ -171,32 +173,67 @@ function MainProject() {
                   </div>
                 </div>
               </div>
+
+              {/* Galerie photos */}
+              <div className="bg-white rounded-2xl p-8 shadow-xl">
+                <h2 className="text-3xl font-bold text-black mb-6">Galerie Photos</h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  {projectImages.map((image, index) => (
+                    <div key={index} className="aspect-w-16 aspect-h-10">
+                      <img 
+                        src={image} 
+                        alt={`Château de Terrefort - Photo ${index + 1}`}
+                        className="w-full h-64 object-cover rounded-lg shadow-md hover:shadow-lg transition-shadow"
+                      />
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
           )}
 
           {activeTab === 'history' && (
-            <div className="bg-white rounded-2xl p-8 shadow-xl">
-              <h2 className="text-3xl font-bold text-black mb-6">L'Histoire du Château</h2>
-              <div className="prose max-w-none text-gray-700 leading-relaxed">
-                <p className="mb-6">
-                  Le château de Terrefort est un lieu d'histoire et de patrimoine situé sur la commune 
-                  de Cubzac-les-Ponts, à environ 20 kilomètres au nord de Bordeaux. Son nom évoque 
-                  l'idée d'un « fort » ou d'une « terre forte », suggérant qu'il s'agissait à l'origine 
-                  d'une forteresse destinée à protéger cette région stratégique.
-                </p>
-                <p className="mb-6">
-                  L'édifice a été construit sur une colline, offrant ainsi une position dominante sur 
-                  les alentours et un contrôle sur les rives de la Garonne, voie commerciale et militaire 
-                  importante de l'époque.
-                </p>
-                <p className="mb-6">
-                  Au XVIIe et au XVIIIe siècle, Terrefort devient un lieu de résidence plus que de défense. 
-                  Il est embelli et modernisé par les familles nobles de la région, qui y ajoutent des 
-                  jardins, des dépendances et des aménagements intérieurs de confort.
-                </p>
+            <div className="space-y-8">
+              <div className="bg-white rounded-2xl p-8 shadow-xl">
+                <h2 className="text-3xl font-bold text-black mb-6">L'Histoire du Château</h2>
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                  <div>
+                    <div className="prose max-w-none text-gray-700 leading-relaxed">
+                      <p className="mb-6">
+                        Le château de Terrefort est un lieu d'histoire et de patrimoine situé sur la commune 
+                        de Cubzac-les-Ponts, à environ 20 kilomètres au nord de Bordeaux. Son nom évoque 
+                        l'idée d'un « fort » ou d'une « terre forte », suggérant qu'il s'agissait à l'origine 
+                        d'une forteresse destinée à protéger cette région stratégique.
+                      </p>
+                      <p className="mb-6">
+                        L'édifice a été construit sur une colline, offrant ainsi une position dominante sur 
+                        les alentours et un contrôle sur les rives de la Garonne, voie commerciale et militaire 
+                        importante de l'époque.
+                      </p>
+                      <p className="mb-6">
+                        Au XVIIe et au XVIIIe siècle, Terrefort devient un lieu de résidence plus que de défense. 
+                        Il est embelli et modernisé par les familles nobles de la région, qui y ajoutent des 
+                        jardins, des dépendances et des aménagements intérieurs de confort.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="space-y-4">
+                    <img 
+                      src={chateauInterior} 
+                      alt="Intérieur historique du château"
+                      className="w-full h-64 object-cover rounded-lg shadow-md"
+                    />
+                    <img 
+                      src={chateauExterior} 
+                      alt="Façade du château"
+                      className="w-full h-48 object-cover rounded-lg shadow-md"
+                    />
+                  </div>
+                </div>
+                
                 <div className="bg-gray-50 p-6 rounded-lg mt-8">
                   <h3 className="text-xl font-semibold mb-4">Architecture Renaissance</h3>
-                  <p>
+                  <p className="text-gray-700">
                     C'est durant cette époque que le château prend une forme plus « classique », 
                     avec des éléments architecturaux qui témoignent de l'influence du style français 
                     de l'époque, notamment les cheminées datant de la Renaissance.
@@ -234,7 +271,7 @@ function MainProject() {
               {/* Concept du projet */}
               <div className="bg-white rounded-2xl p-8 shadow-xl">
                 <h2 className="text-3xl font-bold text-black mb-6">Le Concept</h2>
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
                   <div className="text-center">
                     <div className="bg-black text-white p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                       <Users size={24} />
@@ -256,6 +293,20 @@ function MainProject() {
                     <h3 className="text-xl font-semibold mb-2">Chambres d'Hôtes</h3>
                     <p className="text-gray-600">7 chambres de charme avec espace SPA et bien-être</p>
                   </div>
+                </div>
+                
+                {/* Images du projet */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <img 
+                    src={renovationPlan} 
+                    alt="Plans de rénovation"
+                    className="w-full h-64 object-cover rounded-lg shadow-md"
+                  />
+                  <img 
+                    src={domainView} 
+                    alt="Vue d'ensemble du projet"
+                    className="w-full h-64 object-cover rounded-lg shadow-md"
+                  />
                 </div>
               </div>
             </div>
@@ -318,7 +369,7 @@ function MainProject() {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                   <div>
                     <h3 className="text-xl font-semibold mb-4">Marché Local</h3>
-                    <ul className="space-y-3 text-gray-700">
+                    <ul className="space-y-3 text-gray-700 mb-6">
                       <li className="flex items-start">
                         <TrendingUp className="mr-3 mt-1 text-green-600" size={16} />
                         <span>Bordeaux : 8 millions de touristes annuels</span>
@@ -336,24 +387,37 @@ function MainProject() {
                         <span>Point d'équilibre : 400K€ CA annuel</span>
                       </li>
                     </ul>
-                  </div>
-                  
-                  <div className="bg-gray-50 p-6 rounded-lg">
-                    <h3 className="text-xl font-semibold mb-4">Référence : Chalet Baron</h3>
-                    <p className="text-gray-700 mb-4">
-                      Projet similaire réalisé à Lormont, à 20 min de Bordeaux centre. 
-                      Capacité 15 personnes en hébergement, 49 pour événements.
-                    </p>
-                    <div className="text-sm text-gray-600">
-                      <div className="flex justify-between mb-2">
-                        <span>Agenda réservé :</span>
-                        <span className="font-medium">6-8 mois à l'avance</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span>Performance :</span>
-                        <span className="font-medium text-green-600">Objectifs dépassés</span>
+                    
+                    <div className="bg-gray-50 p-6 rounded-lg">
+                      <h3 className="text-xl font-semibold mb-4">Référence : Chalet Baron</h3>
+                      <p className="text-gray-700 mb-4">
+                        Projet similaire réalisé à Lormont, à 20 min de Bordeaux centre. 
+                        Capacité 15 personnes en hébergement, 49 pour événements.
+                      </p>
+                      <div className="text-sm text-gray-600">
+                        <div className="flex justify-between mb-2">
+                          <span>Agenda réservé :</span>
+                          <span className="font-medium">6-8 mois à l'avance</span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span>Performance :</span>
+                          <span className="font-medium text-green-600">Objectifs dépassés</span>
+                        </div>
                       </div>
                     </div>
+                  </div>
+                  
+                  <div className="space-y-4">
+                    <img 
+                      src={chateauExterior} 
+                      alt="Potentiel du château"
+                      className="w-full h-64 object-cover rounded-lg shadow-md"
+                    />
+                    <img 
+                      src={chateauInterior} 
+                      alt="Espaces intérieurs"
+                      className="w-full h-48 object-cover rounded-lg shadow-md"
+                    />
                   </div>
                 </div>
               </div>
@@ -385,4 +449,4 @@ function MainProject() {
   );
 }
 
-export default MainProject;
+export default TerrefortProject;
