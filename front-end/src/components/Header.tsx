@@ -126,6 +126,21 @@ function Header() {
                 À Propos
               </Link>
               <Link
+                to="/projetphare"
+                className="block px-3 py-2 text-white hover:bg-gray-800 rounded-md"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Projets phares
+              </Link>
+              <Link
+                to="/newprojects"
+                className="block px-3 py-2 text-white hover:bg-gray-800 rounded-md"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Nos réalisations récentes
+              </Link>
+              
+              <Link
                 to="/sendMail"
                 className="block px-3 py-2 text-white hover:bg-gray-800 rounded-md"
                 onClick={() => setIsMenuOpen(false)}
