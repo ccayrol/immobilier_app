@@ -35,7 +35,7 @@ function Header() {
 
           {/* Navigation desktop */}
           <div className="hidden md:flex items-center space-x-8 ml-auto">
-            <Link
+            {/*<Link
               to="/vente"
               className={`${
                 isActive('/vente') ? 'text-white border-b-2 border-white' : 'text-gray-400 hover:text-white'
@@ -50,7 +50,7 @@ function Header() {
               } px-3 py-2 text-sm font-medium transition-colors duration-300`}
             >
               Location
-            </Link>
+            </Link>*/}
             <Link
               to="/projetphare"
               className={`${
@@ -58,6 +58,14 @@ function Header() {
               } px-3 py-2 text-sm font-medium transition-colors duration-300`}
             >
               Projets phares
+            </Link>
+            <Link
+              to="/newprojects"
+              className={`${
+                isActive('/newprojects') ? 'text-white border-b-2 border-white' : 'text-gray-400 hover:text-white'
+              } px-3 py-2 text-sm font-medium transition-colors duration-300`}
+            >
+              Nos réalisations récentes
             </Link>
             <Link
               to="/about"
@@ -96,7 +104,7 @@ function Header() {
         {isMenuOpen && (
           <div className="md:hidden transition-all duration-300 ease-in-out bg-neutral-900 opacity-95">
             <div className="px-2 pt-2 pb-3 space-y-1">
-              <Link
+              {/*<Link
                 to="/vente"
                 className="block px-3 py-2 text-white hover:bg-gray-800 rounded-md"
                 onClick={() => setIsMenuOpen(false)}
@@ -109,7 +117,7 @@ function Header() {
                 onClick={() => setIsMenuOpen(false)}
               >
                 Location
-              </Link>
+              </Link>*/}
               <Link
                 to="/about"
                 className="block px-3 py-2 text-white hover:bg-gray-800 rounded-md"

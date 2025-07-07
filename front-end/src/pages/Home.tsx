@@ -1,5 +1,5 @@
 import React from 'react';
-import backgroundImage from '../assets/bg.jpg';
+import backgroundImage from '../assets/bureauVide.jpg';
 import { ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { motion } from "framer-motion";
@@ -13,11 +13,11 @@ function Home() {
           style={{
             backgroundImage: `url(${backgroundImage})`,
           }}
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 50}}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/50" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 to-black/70" />
         </motion.div>
 
         <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -35,10 +35,10 @@ function Home() {
                 Découvrez notre sélection de biens d'exception et bénéficiez de notre expertise pour tous vos projets immobiliers.
               </p>
               <Link
-                to="/vente"
+                to="/newprojects"
                 className="inline-flex items-center bg-black text-white px-6 py-3 rounded-md text-lg font-medium transition-transform duration-300 hover:scale-105"
               >
-                Découvrir nos biens
+                Découvrir nos projets
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </motion.div>

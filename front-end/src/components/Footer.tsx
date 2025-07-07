@@ -31,7 +31,7 @@ function Footer() {
             <div className="space-y-2 text-gray-400 text-sm sm:text-base">
                 <div className="flex items-start gap-2">
                     <MapPin className="h-5 w-5 flex-shrink-0 mt-1" />
-                    <span>15 Cours de l'Intendance, 33000 Bordeaux</span>
+                    <span>54 rue croix de seguey, 33000 Bordeaux</span>
                 </div>
                 <div className="flex items-start gap-2">
                     <Phone className="h-5 w-5 flex-shrink-0 mt-1" />
@@ -39,7 +39,7 @@ function Footer() {
                 </div>
                 <div className="flex items-start gap-2">
                     <Mail className="h-5 w-5 flex-shrink-0 mt-1" />
-                    <span>contact@partenaire-investissement.fr</span>
+                    <span>partenaireinvestissement@gmail.com</span>
                 </div>
             </div>
           </div>
@@ -47,7 +47,7 @@ function Footer() {
         
         {/* Copyright */}
         <div className="mt-12 pt-8 border-t border-gray-800 text-center text-gray-400 text-sm">
-          <p>© {new Date().getFullYear()} Soubeste Investissement. Tous droits réservés.</p>
+          <p>© {new Date().getFullYear()} Partenaire Investissement. Tous droits réservés.</p>
         </div>
       </div>
     </footer>

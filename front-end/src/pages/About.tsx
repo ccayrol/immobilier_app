@@ -16,9 +16,9 @@ function About() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h1 className="text-4xl sm:text-5xl font-bold text-black mb-4">À Propos de Soubeste Investissement</h1>
+          <h1 className="text-4xl sm:text-5xl font-bold text-black mb-4">À Propos de Partenaire Investissement</h1>
           <p className="text-lg sm:text-xl text-gray-700 max-w-3xl mx-auto px-4">
-            Depuis plus de 20 ans, nous accompagnons nos clients dans leurs projets immobiliers à Bordeaux et sa région.
+            Partenaire Investissement, fort de 30 ans d'expérience à Bordeaux, offre des solutions de vente et de location sur mesure aux investisseurs particuliers et professionnels. 
           </p>
         </motion.div>
 
