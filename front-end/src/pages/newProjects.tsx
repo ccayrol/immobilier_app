@@ -1,19 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from "framer-motion";
-import { ChevronLeft, ChevronRight, MapPin, Calendar, Users, Home } from 'lucide-react';
+import { ChevronLeft, ChevronRight, MapPin, Calendar, Users, Home, ArrowRight } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 // Import des images depuis le dossier assets
-import coliving1 from '../assets/coliving1.png';
+import coliving1 from '../assets/coliving3.png';
 import coliving2 from '../assets/coliving2.png';
-import coliving3 from '../assets/coliving3.png';
+import coliving3 from '../assets/coliving1.png';
 import coliving4 from '../assets/coliving4.png';
-import renovation1 from '../assets/renov1.jpg';
-import renovation2 from '../assets/renov2.jpg';
-import renovation3 from '../assets/renov3.jpg';
-import renovation4 from '../assets/renov4.jpg';
+import renovation1 from '../assets/renov3.jpg';
+import renovation2 from '../assets/renov4.jpg';
+import renovation3 from '../assets/renov1.jpg';
+import renovation4 from '../assets/renov2.jpg';
 
 function RecentProjects() {
   const [currentSlides, setCurrentSlides] = useState<{ [key: number]: number }>({ 1: 0, 2: 0 });
+  const navigate = useNavigate();
 
   // Images pour le carrousel
   const coLivingImages = [
@@ -35,16 +37,15 @@ function RecentProjects() {
       id: 1,
       title: "Co-Living de Talence",
       subtitle: "Résidence étudiante moderne",
-      description: "Un projet innovant de co-living destiné aux étudiants et jeunes actifs, offrant 24 logements meublés avec espaces communs dans un environnement convivial et sécurisé.",
+      description: "Situé à quelques mètres seulement de la barrière de Toulouse, cet immeuble idéalement placé bénéficie d'un cadre privilégié, proche de toutes commodités et des transports en commun. Le projet consiste en la transformation d'une maison individuelle avec garage et atelier au rez-de-chaussée, et logement principal à l'étage, en une colocation de standing comprenant 11 studios entièrement équipés et meublés, ainsi qu'un séjour commun convivial et fonctionnel. D'un espace délaissé et dans son jus, en ressort un projet moderne, en phase avec son temps. ",
       images: coLivingImages,
       details: {
-        superficie: "850 m²",
-        logements: "24 studios",
+        superficie: "233,85 m²",
+        logements: "11 studios",
         livraison: "Mars 2024",
-        localisation: "Talence, proche université"
+        localisation: "4 rue d'Alsace, 33400 Talence"
       },
-      features: ["Espaces communs", "Salle de sport", "Coworking", "Terrasse"],
-      investment: "1.2M€"
+      features: ["Espaces communs", "Coworking", "Terrasse"]
     },
     {
       id: 2,
@@ -58,8 +59,7 @@ function RecentProjects() {
         livraison: "Janvier 2024",
         localisation: "Bordeaux Chartrons"
       },
-      features: ["Matériaux nobles", "Isolation thermique", "Ascenseur", "Parkings"],
-      investment: "800K€"
+      features: ["Matériaux nobles", "Isolation thermique", "Ascenseur", "Parkings"]
     }
   ];
 
@@ -88,6 +88,10 @@ function RecentProjects() {
       ...prev,
       [projectId]: slideIndex
     }));
+  };
+
+  const handleContactClick = () => {
+    navigate('/sendmail');
   };
 
   // Suppression du useEffect pour le défilement automatique
@@ -222,12 +226,15 @@ function RecentProjects() {
                       </div>
                     </div>
 
-                    {/* Investissement */}
-                    <div className="border-t pt-6">
-                      <div className="flex justify-between items-center">
-                        <span className="text-gray-600">Investissement total</span>
-                        <span className="text-2xl font-bold text-black">{project.investment}</span>
-                      </div>
+                    {/* Bouton En savoir plus */}
+                    <div className="mt-auto">
+                      <button
+                        onClick={handleContactClick}
+                        className="inline-flex items-center px-6 py-3 bg-black text-white font-medium rounded-lg hover:bg-gray-800 transition-colors duration-200 group"
+                      >
+                        En savoir plus
+                        <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -237,7 +244,7 @@ function RecentProjects() {
         </div>
 
         {/* Section Chiffres */}
-        <motion.div 
+        {/*<motion.div 
           initial={{ opacity: 0, y: 50 }} 
           animate={{ opacity: 1, y: 0 }} 
           transition={{ duration: 0.8, delay: 0.6 }}
@@ -263,7 +270,7 @@ function RecentProjects() {
               </motion.div>
             ))}
           </div>
-        </motion.div>
+        </motion.div>*/}
       </div>
     </div>
   );

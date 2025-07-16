@@ -99,13 +99,15 @@ function Home() {
             <p className="text-gray-600 mb-6 text-sm md:text-base">
               Des biens d'exception sélectionnés avec soin dans les quartiers les plus prisés de Bordeaux.
             </p>
-            <Link
-              to="/vente"
+            <a
+              href="https://www.leboncoin.fr/boutique/3228512/partenaire_investissement.htm"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-black font-medium transition-transform duration-300 hover:scale-105 inline-flex items-center"
             >
               En savoir plus
               <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
+            </a>
           </motion.div>
 
           <motion.div
@@ -118,13 +120,15 @@ function Home() {
             <p className="text-gray-600 mb-6 text-sm md:text-base">
               Un accompagnement personnalisé pour trouver le bien qui correspond à vos attentes.
             </p>
-            <Link
-              to="/location"
+            <a
+              href="https://www.leboncoin.fr/boutique/3228512/partenaire_investissement.htm"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-black font-medium transition-transform duration-300 hover:scale-105 inline-flex items-center"
             >
               En savoir plus
               <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
+            </a>
           </motion.div>
         </div>
       </section>

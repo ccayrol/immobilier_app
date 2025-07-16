@@ -83,7 +83,7 @@ function Header() {
             >
               Contactez-nous
             </Link>
-            <Link
+            {/*<Link
               to="/login"
               className={`${
               isActive('/login') ? 'text-white border-b-2 border-white' : 'text-gray-400 hover:text-white'
@@ -94,7 +94,7 @@ function Header() {
                   alt="Connexion" 
                   className="h-8 w-8 mr-2" // Ajuste la taille de l'image et l'espacement
                 />
-            </Link>
+            </Link>*/}
             {/* Connexion avec un style différent */}
             
           </div>
@@ -147,13 +147,13 @@ function Header() {
               >
                 Contactez-nous
               </Link>
-              <Link
+              {/*<Link
                 to="/login"
                 className="block px-3 py-2 text-white hover:bg-gray-800 rounded-md"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Connexion   
-            </Link>
+            </Link>*/}
             </div>
           </div>
         )}
