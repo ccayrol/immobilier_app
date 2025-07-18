@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from "framer-motion";
-import { MapPin, Users, Home, Euro, TrendingUp, Building } from 'lucide-react';
+import { MapPin, Users, Home, Euro, TrendingUp, Building, Mail } from 'lucide-react';
 
 // Import des images (à remplacer par vos vraies images)
 import chateauExterior from '../assets/terrefort2.jpg';
@@ -51,6 +51,10 @@ function TerrefortProject() {
     { label: "Domaine", value: "70 hectares", icon: MapPin },
     { label: "CA prévisionnel", value: "700K€/an", icon: TrendingUp }
   ];
+
+  const handleContactClick = () => {
+    window.location.href = '/sendmail';
+  };
 
   return (
     <div className="min-h-screen w-full bg-white">
@@ -434,12 +438,20 @@ function TerrefortProject() {
         >
           <h2 className="text-3xl font-bold mb-4">Intéressé par ce projet ?</h2>
           <p className="text-lg mb-6">Contactez-nous pour plus d'informations</p>
+          
+          <button
+            onClick={handleContactClick}
+            className="bg-white text-black px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 mb-6 flex items-center justify-center mx-auto"
+          >
+            <Mail className="mr-2" size={20} />
+            Nous contacter
+          </button>
+          
           <div className="space-y-2">
-            <p className="font-medium">Eric Soubeste</p>
-            <p>06 00 00 00 00</p>
-            <p>soubestee@gmail.com</p>
+            <p className="font-medium">Partenaire Investissement</p>
+            <p>+33 5 24 60 24 60</p>
+            <p>partenaireinvestissement@gmail.com </p>
             <p className="text-sm text-gray-300 mt-4">
-              Partenaire Investissement<br/>
               54 rue de la croix de seguey, 33000 Bordeaux
             </p>
           </div>

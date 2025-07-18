@@ -57,12 +57,12 @@ function Home() {
                 </div>
                 <div className="flex items-center text-gray-700">
                   <Phone className="h-5 w-5 mr-3 text-black flex-shrink-0" />
-                  <a href="tel:+33556000000" className="hover:text-black text-sm md:text-base">+33 5 56 00 00 00</a>
+                  <a href="tel:+33524602460" className="hover:text-black text-sm md:text-base">+ 33 5 24 60 24 60</a>
                 </div>
                 <div className="flex items-center text-gray-700">
                   <Mail className="h-5 w-5 mr-3 text-black flex-shrink-0" />
-                  <a href="mailto:contact@partenaire-investissement.fr" className="hover:text-black text-sm md:text-base break-words">
-                    contact@partenaire-investissement.fr
+                  <a href="mailto:partenaireinvestissement@gmail.com " className="hover:text-black text-sm md:text-base break-words">
+                    partenaireinvestissement@gmail.com 
                   </a>
                 </div>
                 <div className="pt-4">

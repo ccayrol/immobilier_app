@@ -18,10 +18,42 @@ function Footer() {
           <div className="flex flex-col items-center">
             <h3 className="text-lg font-semibold mb-4 text-white ">Nos Services</h3>
             <ul className="space-y-2 text-gray-400 text-sm sm:text-base text-center">
-              <li>Vente Immobilière</li>
-              <li>Location de Biens</li>
-              <li>Rénovation</li>
-              <li>Conseil en Investissement</li>
+              <li>
+                <a 
+                  href="https://www.leboncoin.fr/boutique/3228512/partenaire_investissement.htm" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="hover:text-white transition-colors duration-200"
+                >
+                  Vente Immobilière
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="https://www.leboncoin.fr/boutique/3228512/partenaire_investissement.htm#online_ads" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="hover:text-white transition-colors duration-200"
+                >
+                  Location de Biens
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="/newprojects" 
+                  className="hover:text-white transition-colors duration-200"
+                >
+                  Rénovation
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="/sendmail" 
+                  className="hover:text-white transition-colors duration-200"
+                >
+                  Conseil en Investissement
+                </a>
+              </li>
             </ul>
           </div>
           
@@ -35,7 +67,7 @@ function Footer() {
                 </div>
                 <div className="flex items-start gap-2">
                     <Phone className="h-5 w-5 flex-shrink-0 mt-1" />
-                    <span>+33 5 56 00 00 00</span>
+                    <span>+33 5 24 60 24 60</span>
                 </div>
                 <div className="flex items-start gap-2">
                     <Mail className="h-5 w-5 flex-shrink-0 mt-1" />
