@@ -29,7 +29,7 @@ function TerrefortProject() {
       year: "2025",
       title: "Début des travaux",
       description: "Rénovation du château et aménagement des chambres",
-      status: "upcoming"
+      status: "completed"
     },
     {
       year: "2026",
@@ -90,8 +90,7 @@ function TerrefortProject() {
             {[
               { id: 'overview', label: 'Vue d\'ensemble' },
               { id: 'history', label: 'Histoire' },
-              { id: 'project', label: 'Le Projet' },
-              { id: 'financial', label: 'Financier' }
+              { id: 'project', label: 'Le Projet' }
             ].map((tab) => (
               <button
                 key={tab.id}
@@ -311,118 +310,6 @@ function TerrefortProject() {
                     alt="Vue d'ensemble du projet"
                     className="w-full h-64 object-cover rounded-lg shadow-md"
                   />
-                </div>
-              </div>
-            </div>
-          )}
-
-          {activeTab === 'financial' && (
-            <div className="space-y-12">
-              {/* Investissement */}
-              <div className="bg-white rounded-2xl p-8 shadow-xl">
-                <h2 className="text-3xl font-bold text-black mb-6">Structure Financière</h2>
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                  <div>
-                    <h3 className="text-xl font-semibold mb-4">Investissement</h3>
-                    <div className="space-y-3">
-                      <div className="flex justify-between py-2 border-b border-gray-100">
-                        <span className="text-gray-600">Prix d'acquisition</span>
-                        <span className="font-medium">1,5M€</span>
-                      </div>
-                      <div className="flex justify-between py-2 border-b border-gray-100">
-                        <span className="text-gray-600">Travaux de rénovation</span>
-                        <span className="font-medium">3,3M€</span>
-                      </div>
-                      <div className="flex justify-between py-2 border-b-2 border-black">
-                        <span className="font-semibold">Total investissement</span>
-                        <span className="font-bold text-lg">4,5M€</span>
-                      </div>
-                      <div className="text-sm text-gray-500 mt-2">
-                        Soit environ 1 000€/m² - Acquisition sur fonds propres
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div>
-                    <h3 className="text-xl font-semibold mb-4">Rentabilité Prévisionnelle</h3>
-                    <div className="space-y-3">
-                      <div className="flex justify-between py-2 border-b border-gray-100">
-                        <span className="text-gray-600">CA annuel (rythme croisière)</span>
-                        <span className="font-medium">700K€</span>
-                      </div>
-                      <div className="flex justify-between py-2 border-b border-gray-100">
-                        <span className="text-gray-600">Charges d'exploitation</span>
-                        <span className="font-medium">180K€</span>
-                      </div>
-                      <div className="flex justify-between py-2 border-b border-gray-100">
-                        <span className="text-gray-600">Remboursement emprunt</span>
-                        <span className="font-medium">182K€</span>
-                      </div>
-                      <div className="flex justify-between py-2 border-b-2 border-green-600">
-                        <span className="font-semibold">Résultat net prévisionnel</span>
-                        <span className="font-bold text-lg text-green-600">338K€</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Market study */}
-              <div className="bg-white rounded-2xl p-8 shadow-xl">
-                <h2 className="text-3xl font-bold text-black mb-6">Étude de Marché</h2>
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                  <div>
-                    <h3 className="text-xl font-semibold mb-4">Marché Local</h3>
-                    <ul className="space-y-3 text-gray-700 mb-6">
-                      <li className="flex items-start">
-                        <TrendingUp className="mr-3 mt-1 text-green-600" size={16} />
-                        <span>Bordeaux : 8 millions de touristes annuels</span>
-                      </li>
-                      <li className="flex items-start">
-                        <TrendingUp className="mr-3 mt-1 text-green-600" size={16} />
-                        <span>Taux de remplissage mariages : 90% (avril-octobre)</span>
-                      </li>
-                      <li className="flex items-start">
-                        <TrendingUp className="mr-3 mt-1 text-green-600" size={16} />
-                        <span>Prix moyen weekend : 20 000€</span>
-                      </li>
-                      <li className="flex items-start">
-                        <TrendingUp className="mr-3 mt-1 text-green-600" size={16} />
-                        <span>Point d'équilibre : 400K€ CA annuel</span>
-                      </li>
-                    </ul>
-                    
-                    <div className="bg-gray-50 p-6 rounded-lg">
-                      <h3 className="text-xl font-semibold mb-4">Référence : Chalet Baron</h3>
-                      <p className="text-gray-700 mb-4">
-                        Projet similaire réalisé à Lormont, à 20 min de Bordeaux centre. 
-                        Capacité 15 personnes en hébergement, 49 pour événements.
-                      </p>
-                      <div className="text-sm text-gray-600">
-                        <div className="flex justify-between mb-2">
-                          <span>Agenda réservé :</span>
-                          <span className="font-medium">6-8 mois à l'avance</span>
-                        </div>
-                        <div className="flex justify-between">
-                          <span>Performance :</span>
-                          <span className="font-medium text-green-600">Objectifs dépassés</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div className="space-y-4">
-                    <img 
-                      src={chateauExterior} 
-                      alt="Potentiel du château"
-                      className="w-full h-64 object-cover rounded-lg shadow-md"
-                    />
-                    <img 
-                      src={chateauInterior} 
-                      alt="Espaces intérieurs"
-                      className="w-full h-48 object-cover rounded-lg shadow-md"
-                    />
-                  </div>
                 </div>
               </div>
             </div>
