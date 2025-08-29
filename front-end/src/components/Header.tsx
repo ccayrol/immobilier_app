@@ -16,7 +16,6 @@ function Header() {
           {/* Logo */}
           <div className="flex items-center">
             <Link to="/" className="flex items-center whitespace-nowrap">
-              <Building2 className="h-8 w-8 text-white" />
               <span className="ml-2 text-xl font-semibold text-white tracking-wide">
                 Partenaire Investissement
               </span>

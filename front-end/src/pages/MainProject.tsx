@@ -4,9 +4,11 @@ import { MapPin, Users, Home, Euro, TrendingUp, Building, Mail } from 'lucide-re
 
 // Import des images (à remplacer par vos vraies images)
 import chateauExterior from '../assets/terrefort2.jpg';
-import chateauInterior from '../assets/terrefort2.jpg';
-import domainView from '../assets/terrefort1.jpg';
-import renovationPlan from '../assets/terrefort1.jpg';
+import chateauInterior from '../assets/IMG_8930.jpg';
+import domainView from '../assets/IMG_8957.jpg';
+import renovationPlan from '../assets/IMG_8961.jpg';
+import img_8958 from '../assets/IMG_8958.jpg';
+import img_8931 from '../assets/IMG_8931.jpg';
 
 function TerrefortProject() {
   const [activeTab, setActiveTab] = useState('overview');
@@ -14,8 +16,8 @@ function TerrefortProject() {
   const projectImages = [
     chateauExterior,
     chateauInterior,
-    domainView,
-    renovationPlan
+    renovationPlan,
+    domainView
   ];
 
   const timelineData = [
@@ -161,7 +163,7 @@ function TerrefortProject() {
                   <div className="space-y-4">
                     <div className="aspect-w-16 aspect-h-9">
                       <img 
-                        src={domainView} 
+                        src={chateauExterior} 
                         alt="Vue du domaine"
                         className="w-full h-64 object-cover rounded-lg"
                       />
@@ -222,12 +224,12 @@ function TerrefortProject() {
                   </div>
                   <div className="space-y-4">
                     <img 
-                      src={chateauInterior} 
+                      src={img_8958} 
                       alt="Intérieur historique du château"
                       className="w-full h-64 object-cover rounded-lg shadow-md"
                     />
                     <img 
-                      src={chateauExterior} 
+                      src={img_8931} 
                       alt="Façade du château"
                       className="w-full h-48 object-cover rounded-lg shadow-md"
                     />

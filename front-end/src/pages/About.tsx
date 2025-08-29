@@ -75,7 +75,7 @@ function About() {
         <div className="mb-16 px-4">
           <h2 className="text-3xl font-bold text-black mb-6">Nos Chiffres Clés</h2>
           <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
-            {[{ chiffre: "20+", texte: "Années d'expérience" }, { chiffre: "+300", texte: "Transactions réalisées" }, { chiffre: "98%", texte: "Clients satisfaits" }, { chiffre: "1", texte: "Bureau à Bordeaux" }].map((item, index) => (
+            {[{ chiffre: "20+", texte: "Années d'expérience" }, { chiffre: "+500", texte: "Transactions réalisées" }, { chiffre: "98%", texte: "Clients satisfaits" }, { chiffre: "1", texte: "Bureau à Bordeaux" }].map((item, index) => (
               <motion.div key={item.chiffre} initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: index * 0.2 }} className="p-6 bg-white shadow-lg rounded-lg">
                 <div className="text-4xl font-bold text-black mb-2">{item.chiffre}</div>
                 <div className="text-base text-gray-600">{item.texte}</div>
@@ -150,7 +150,7 @@ function About() {
           <div className="bg-black rounded-2xl p-8 text-white">
             <h2 className="text-3xl font-bold mb-4">Envie de nous rencontrer ?</h2>
             <p className="text-lg mb-6 text-gray-300">
-              Plus de 300 transactions réalisées. Discutons ensemble de votre projet immobilier.
+              Plus de 500 transactions réalisées. Discutons ensemble de votre projet immobilier.
             </p>
             <button onClick={handleContactClick} className="inline-flex items-center px-6 py-3 bg-white text-black font-medium rounded-lg hover:bg-gray-100 transition-colors duration-200">
               <Mail className="mr-2 h-5 w-5" /> Prendre RDV
