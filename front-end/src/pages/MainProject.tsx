@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from "framer-motion";
-import { MapPin, Users, Home, Euro, TrendingUp, Building, Mail } from 'lucide-react';
+import { MapPin, Users, Home, Euro, TrendingUp, Building, Mail, Bed } from 'lucide-react';
 
 // Import des images (à remplacer par vos vraies images)
 import chateauExterior from '../assets/terrefort2.jpg';
@@ -48,10 +48,11 @@ function TerrefortProject() {
   ];
 
   const financialData = [
-    { label: "Investissement total", value: "4,5M€", icon: Euro },
-    { label: "Surface totale", value: "4 500m²", icon: Building },
     { label: "Domaine", value: "70 hectares", icon: MapPin },
-    { label: "CA prévisionnel", value: "700K€/an", icon: TrendingUp }
+    { label: "Investissement total", value: "4,5M€", icon: Euro },
+    { label: "Surface du château", value: "950m²", icon: Building },
+    { label: "Nombre de chambres", value: "14", icon: Bed },
+    { label: "Surface total du bâti", value: "4500m²", icon: Building },
   ];
 
   const handleContactClick = () => {
@@ -119,7 +120,7 @@ function TerrefortProject() {
           {activeTab === 'overview' && (
             <div className="space-y-16">
               {/* Chiffres clés */}
-              <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+              <div className="grid grid-cols-2 lg:grid-cols-5 gap-8">
                 {financialData.map((item, index) => (
                   <motion.div
                     key={item.label}
@@ -205,20 +206,23 @@ function TerrefortProject() {
                   <div>
                     <div className="prose max-w-none text-gray-700 leading-relaxed">
                       <p className="mb-6">
-                        Le château de Terrefort est un lieu d'histoire et de patrimoine situé sur la commune 
-                        de Cubzac-les-Ponts, à environ 20 kilomètres au nord de Bordeaux. Son nom évoque 
-                        l'idée d'un « fort » ou d'une « terre forte », suggérant qu'il s'agissait à l'origine 
-                        d'une forteresse destinée à protéger cette région stratégique.
+                        Le château de Terrefort est un lieu d'histoire et de patrimoine situé sur la commune de
+                        Cubzac-les-Ponts, à environ 20 kilomètres au nord de Bordeaux, dans la région de la
+                        Nouvelle-Aquitaine. Il a une histoire intéressante, bien qu'elle soit moins connue que celle de certains autres châteaux de la région.
                       </p>
                       <p className="mb-6">
-                        L'édifice a été construit sur une colline, offrant ainsi une position dominante sur 
-                        les alentours et un contrôle sur les rives de la Garonne, voie commerciale et militaire 
-                        importante de l'époque.
+                        Son nom évoque l’idée d’un « fort » ou d’une « terre forte », ce qui suggère qu’il s’agissait
+                        à l’origine d’une forteresse destinée à protéger cette région stratégique, située près de la Dordogne et et de la Garonne, qui étaient des voies commerciales et militaires
+                        importantes. L'édifice a été construit sur une colline, offrant ainsi une position
+                        dominante sur les alentours et un contrôle sur les rives de la Garonne.
                       </p>
                       <p className="mb-6">
-                        Au XVIIe et au XVIIIe siècle, Terrefort devient un lieu de résidence plus que de défense. 
-                        Il est embelli et modernisé par les familles nobles de la région, qui y ajoutent des 
-                        jardins, des dépendances et des aménagements intérieurs de confort.
+                        Au XVIIe et au XVIIIe siècle, Terrefort devient un lieu de résidence plus que de
+                        défense. Comme beaucoup d'autres châteaux de la région, il est embelli et modernisé
+                        par ses propriétaires, les familles nobles de la région, qui y ajoutent des jardins, des
+                        dépendances et des aménagements intérieurs de confort. C'est durant cette époque que
+                        le château prend une forme plus « classique », avec des éléments architecturaux qui
+                        témoignent de l'influence du style français de l'époque.
                       </p>
                     </div>
                   </div>
