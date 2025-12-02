@@ -95,12 +95,12 @@ function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1, ease: "easeOut" }}  
           >
-            <h3 className="text-lg md:text-xl font-semibold mb-4">Vente Immobilière</h3>
+            <h3 className="text-lg md:text-xl font-semibold mb-4">Ventes Immobilières & Locations longues durée</h3>
             <p className="text-gray-600 mb-6 text-sm md:text-base">
               Des biens d'exception sélectionnés avec soin dans les quartiers les plus prisés de Bordeaux.
             </p>
             <a
-              href="https://www.leboncoin.fr/boutique/3228512/partenaire_investissement.htm"
+              href="https://www.leboncoin.fr/boutique/3228512/partenaire_investissement.html"
               target="_blank"
               rel="noopener noreferrer"
               className="text-black font-medium transition-transform duration-300 hover:scale-105 inline-flex items-center"
@@ -116,7 +116,7 @@ function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.2, ease: "easeOut" }}  
           >
-            <h3 className="text-lg md:text-xl font-semibold mb-4">Location</h3>
+            <h3 className="text-lg md:text-xl font-semibold mb-4">Location courte durée</h3>
             <p className="text-gray-600 mb-6 text-sm md:text-base">
               Un accompagnement personnalisé pour trouver le bien qui correspond à vos attentes.
             </p>
